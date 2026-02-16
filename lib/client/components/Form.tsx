@@ -152,7 +152,6 @@ const FormMessage = React.forwardRef<
 
   const { error, formMessageId } = useFormField();
 
-  // @ts-expect-error -- we translate everything that's passed here as is.
   const body = error ? t(String(error?.message)) : children;
 
   if (!body) {
